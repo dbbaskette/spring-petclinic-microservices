@@ -4,7 +4,8 @@ metadata:
   name: spring-petclinic-microservices
   annotations:
     github.com/project-slug: dbbaskette/spring-petclinic-microservices
-    backstage.io/kubernetes-id: spring-petclinic-microservices
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/part-of: spring-petclinic'
+'
 
 spec:
   type: other
