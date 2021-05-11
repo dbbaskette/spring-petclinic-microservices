@@ -4,6 +4,8 @@ metadata:
   name: spring-petclinic-microservices
   annotations:
     github.com/project-slug: dbbaskette/spring-petclinic-microservices
+    backstage.io/kubernetes-id: spring-petclinic-microservices
+
 spec:
   type: other
   lifecycle: unknown
