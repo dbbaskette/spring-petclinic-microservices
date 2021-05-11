@@ -1,0 +1,20 @@
+{
+    "builds": [
+        {
+            "imageName": "spring-petclinic-customers-service",
+            "tag": "registry.tmm1.vmwaretanzu.us/demo/spring-petclinic-customers-service:latest@sha256:ea81615e74a3dd3a94659aeed2f4ead98b3c7348a23ba03a7e201b6090d13d23"
+        },
+        {
+            "imageName": "spring-petclinic-visits-service",
+            "tag": "registry.tmm1.vmwaretanzu.us/demo/spring-petclinic-visits-service:latest@sha256:5e06611fb6953b080ebae9ec6f7c85890d0199438dbe9342a6ec9290a2217468"
+        },
+        {
+            "imageName": "spring-petclinic-vets-service",
+            "tag": "registry.tmm1.vmwaretanzu.us/demo/spring-petclinic-vets-service:latest@sha256:4173928ec03c4fbaf02f744811139f052f571642911508e0de2d3ff15839e3a6"
+        },
+        {
+            "imageName": "spring-petclinic-api-gateway",
+            "tag": "registry.tmm1.vmwaretanzu.us/demo/spring-petclinic-api-gateway:latest@sha256:3f6ea604d837f1df34d10470e102f96ce64a93cf364489d9d8341f0c4fe35f1d"
+        }
+    ]
+}

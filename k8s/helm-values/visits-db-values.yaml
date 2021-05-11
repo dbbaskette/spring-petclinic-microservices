@@ -1,0 +1,13 @@
+## Cluster domain
+##
+clusterDomain: cluster.local
+## Admin (root) credentials
+##
+auth:
+  ## MySQL root password
+  ## ref: https://github.com/bitnami/bitnami-docker-mysql#setting-the-root-password-on-first-run
+  ##
+  rootPassword: tanzu
+  database: service_instance_db
+  username: admin
+  password: tanzu

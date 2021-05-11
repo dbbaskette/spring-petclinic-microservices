@@ -7,6 +7,7 @@
 	<artifactId>spring-petclinic-visits-service</artifactId>
 	<packaging>jar</packaging>
 	<description>Spring PetClinic Visits Service</description>
+    <version>2.4.2</version>
 
     <parent>
         <groupId>org.springframework.samples</groupId>

@@ -1,0 +1,8 @@
+auth:
+  ## MySQL root password
+  ## ref: https://github.com/bitnami/bitnami-docker-mysql#setting-the-root-password-on-first-run
+  ##
+  rootPassword: "vmwaretanzu2021"
+  database: service_instance_db
+  username: admin
+  password: "vmwaretanzu2021"

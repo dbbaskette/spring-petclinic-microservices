@@ -1,0 +1,48 @@
+apiVersion: skaffold/v2beta15
+kind: Config
+metadata:
+  name: spring-petclinic-microservices
+build:
+  artifacts:
+  - image: spring-petclinic-config-server
+    context:  ./spring-petclinic-config-server
+    buildpacks:
+      builder:  paketobuildpacks/builder:base
+      trustBuilder: true
+  - image: spring-petclinic-discovery-server
+    context:  ./spring-petclinic-discovery-server
+    buildpacks:
+      builder:  paketobuildpacks/builder:base
+      trustBuilder: true
+  - image: spring-petclinic-customers-service
+    context:  ./spring-petclinic-customers-service
+    buildpacks:
+      builder:  paketobuildpacks/builder:base
+      trustBuilder: true
+  - image: spring-petclinic-visits-service
+    context:  ./spring-petclinic-visits-service
+    buildpacks:
+      builder: paketobuildpacks/builder:base
+      trustBuilder: true
+  - image: spring-petclinic-vets-service
+    context:  ./spring-petclinic-vets-service
+    buildpacks:
+      builder:  paketobuildpacks/builder:base
+      trustBuilder: true
+  - image: spring-petclinic-api-gateway
+    context:  ./spring-petclinic-api-gateway
+    buildpacks:
+      builder:  paketobuildpacks/builder:base
+      trustBuilder: true
+deploy:
+  kubectl:
+    manifests:
+    - k8s/api-gateway-deployment.yaml
+    - k8s/init-namespace/01-namespace.yaml
+    - k8s/init-services/02-config-map.yaml
+    - k8s/init-services/03-role.yaml
+    - k8s/init-services/04-wavefront.yaml.off.yaml
+    - k8s/init-services/05-api-gateway-service.yaml
+    - k8s/init-services/06-customers-service-service.yaml
+    - k8s/init-services/07-vets-service-service.yaml
+    - k8s/init-services/08-visits-service-service.yaml
